@@ -1,10 +1,10 @@
 
 <form (ngSubmit)="submitRepo()"> 
     <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="text" class="form-control" id="" placeholder="Search Repo" name="repo" [(ngModel)]="repo">
+      <label for="exampleInputPassword1">SEARCH</label>
+      <input type="text" class="form-control" id="searchbar" placeholder="Search Repo" name="repo" [(ngModel)]="repo">
     </div>
-    <button type="submit" class="btn btn-primary">Search Repo</button>
+    <button id="searchuser" type="submit" class="btn btn-primary">Search Repo</button>
   </form>
 <div *ngFor="let repo of Repo">
   <div class="container">
