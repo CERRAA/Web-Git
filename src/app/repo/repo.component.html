@@ -6,4 +6,6 @@
     </div>
     <button type="submit" class="btn btn-primary">Search Repo</button>
   </form>
-  
+<div *ngFor="let repo of Repo">
+  <h1>{{repo.name}}</h1>
+</div>

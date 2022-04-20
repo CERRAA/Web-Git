@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitService } from '../git.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-user',
@@ -7,12 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor( private service:GitService) { 
+    
+  }
 user:any
+
+User:User
+
 submitUser(){
-  console.log(this.user)
+  this.service.getUser(this.user)
+  
 }
   ngOnInit(): void {
+    this.User=this.service.User
   }
 
 }

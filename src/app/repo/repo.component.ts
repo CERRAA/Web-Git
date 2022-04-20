@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GitService } from '../git.service';
+import { Repo } from '../repo';
 
 @Component({
   selector: 'app-repo',
@@ -7,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:GitService) { }
 
   repo:any
+  public Repo:Repo[]
   submitRepo(){
-    console.log(this.repo)
+  this.service.getRepo(this.repo).subscribe((data)=>{
+    this.Repo=data
+  })
   }
   ngOnInit(): void {
   }
