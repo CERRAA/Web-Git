@@ -1,4 +1,7 @@
-card{
-    width: 600px;
-    height: 600px;
+.card{
+    width: 500px;
+    color:white;
+    background-color:#2e091d;
+    border-radius:25px;
+    
 }
