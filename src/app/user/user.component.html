@@ -1,18 +1,27 @@
 <form (ngSubmit)="submitUser()">
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="text" class="form-control" id="" placeholder="Search user" name="user" [(ngModel)]="user">
+    <input type="text" class="form-control" id="searchbar"   placeholder="Search user" name="user" [(ngModel)]="user">
   </div>
-  <button type="submit" class="btn btn-primary">Search User</button>
+  <button  id="searchuser" type="submit" class="btn btn-primary">Search User</button>
 </form>
 <div *ngIf="User">
-<p>{{User.login}}</p>
-<img [src]="User.avatar_url">
-<p>{{User.followers}}</p>
-<p>{{User.created_at}}</p>
-<p>{{User.updated_at}}</p>
-<p>{{User.email}}</p>
-<p>{{User.name}}</p>
-<p>{{User.following}}</p>
-<p>{{User.id}}</p>
-</div>
+    <div class="container">
+        <div class="card">
+            <p>{{User.login}}</p>
+            <img [src]="User.avatar_url" height="400">
+            <div class="card-body">
+
+            <p>{{User.followers}}</p>
+            <p>{{User.created_at}}</p>
+            <p>{{User.updated_at}}</p>
+            <p>{{User.email}}</p>
+            <p>{{User.name}}</p>
+            <p>{{User.following}}</p>
+            <p>{{User.id}}</p>
+            </div>
+           
+    </div>
+
+        </div>
+    </div>
