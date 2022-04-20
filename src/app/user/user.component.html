@@ -1,7 +1,7 @@
-<form>
+<form (ngSubmit)="submitUser()">
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="text" class="form-control" id="" placeholder="Search user">
+    <input type="text" class="form-control" id="" placeholder="Search user" name="user" [(ngModel)]="user">
   </div>
   <button type="submit" class="btn btn-primary">Search User</button>
 </form>

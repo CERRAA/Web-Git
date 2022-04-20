@@ -1,8 +1,8 @@
 
-<form>
+<form (ngSubmit)="submitRepo()"> 
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="text" class="form-control" id="" placeholder="Search Repo">
+      <input type="text" class="form-control" id="" placeholder="Search Repo" name="repo" [(ngModel)]="repo">
     </div>
     <button type="submit" class="btn btn-primary">Search Repo</button>
   </form>

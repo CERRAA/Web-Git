@@ -9,6 +9,10 @@ export class RepoComponent implements OnInit {
 
   constructor() { }
 
+  repo:any
+  submitRepo(){
+    console.log(this.repo)
+  }
   ngOnInit(): void {
   }
 
